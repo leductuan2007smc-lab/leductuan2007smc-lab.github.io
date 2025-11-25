@@ -1,0 +1,39 @@
+*{
+    box-sizing:border-box
+}
+body{
+    font-family:Inter, Arial, sans-serif;margin:0;
+    color:#222
+}
+.container{
+    max-width:700px;
+    margin:0 auto;
+    padding:1rem
+}
+form{
+    display:flex;
+    flex-direction:column;
+    gap:0.8rem;
+    margin-top:1rem
+}
+label{
+    display:flex;
+    flex-direction:column;
+    font-weight:600
+}
+input,select,textarea{
+    padding:0.6rem;
+    border-radius:6px;
+    border:1px solid #d1d5db
+}
+.btn{
+    background:#0b6bd6;
+    color:white;
+    padding:.8rem;
+    border:none;
+    border-radius:8px;
+    cursor:pointer
+}
+.btn:active{
+    transform:translateY(1px)
+}

@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form dang ki</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    
+</body>
+</html>
+</head>
+<body>
+<header class="site-header">
+</header>
+
+
+<main class="container register-page">
+<h1>Đăng ký thành viên</h1>
+<form id="regForm" action="#" method="post" novalidate>
+<label>Họ và tên
+<input type="text" name="fullname" required minlength="2">
+</label>
+
+
+<label>Email
+<input type="email" name="email" required>
+</label>
+
+
+<label>Số điện thoại
+<input type="tel" name="phone" pattern="[0-9]{9,12}" required>
+</label>
+
+
+<label>Gói chọn
+<select name="plan" required>
+<option value="">-- Chọn gói --</option>
+<option value="month">Thẻ tháng</option>
+<option value="6month">Thẻ 6 tháng</option>
+<option value="year">Thẻ năm</option>
+</select>
+</label>
+
+
+<label>Ghi chú (tùy chọn)
+<textarea name="note" rows="4"></textarea>
+</label>
+
+
+<button class="btn" type="submit">Gửi đăng ký</button>
+</form>
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+<p>&copy; 2025 FitLife Gym</p>
+</div>
+</footer>
+
+
+<script>
+document.getElementById('regForm').addEventListener('submit', function(e){
+e.preventDefault();
+// Simple client-side check
+if(!this.checkValidity()){
+alert('Vui lòng kiểm tra lại thông tin.');
+return;
+}
+alert('Cảm ơn! Đăng ký của bạn đã được gửi.');
+this.reset();
+});
+</script>
+</body>
+</html>

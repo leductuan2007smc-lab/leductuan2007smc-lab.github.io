@@ -1,0 +1,210 @@
+
+:root {
+    --primary-blue: #0b3d91;    
+    --accent-orange: #ff4500;  
+    --text-dark: #1f2937;       
+    --bg-light: #f7f8fb;        
+    --bg-dark: #1a1a2e;          
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', system-ui, Arial, sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+.site-header {
+    background: var(--primary-blue);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+.main-nav a {
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.main-nav a:hover {
+    color: var(--accent-orange);
+}
+.main-nav .cta {
+    background: var(--accent-orange);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    transition: background 0.3s, transform 0.2s;
+    margin-left: 1.5rem;
+}
+.main-nav .cta:hover {
+    background: #cc3700;
+    transform: translateY(-2px);
+}
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.hero {
+    padding: 6rem 0;
+    background: linear-gradient(105deg, var(--primary-blue) 40%, #2b7be4 100%);
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 0 0 1rem;
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0.5rem auto 2rem;
+}
+.hero .btn {
+    display: inline-block;
+    background: var(--accent-orange);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+.hero .btn:hover {
+    background: #cc3700;
+    transform: scale(1.05);
+}
+.features {
+    display: flex;
+    gap: 2rem;
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+}
+.features article {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    border-top: 5px solid var(--primary-blue);
+    transition: transform 0.3s;
+}
+.features article:hover {
+    transform: translateY(-5px);
+}
+.features h3 {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+.features p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+.about {
+    margin-top: 4rem;
+    text-align: center;
+}
+.about h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+}
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.site-footer {
+    background: var(--bg-dark);
+    color: #cccccc;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+.site-footer .container {
+    text-align: center;
+}
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+@media (max-width: 900px) { 
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .features {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .features article {
+        border-top: none;
+        border-left: 5px solid var(--primary-blue);
+        padding: 1.5rem 1rem;
+    }
+    .nav-toggle {
+        display: block;
+        z-index: 20;
+    }
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        min-height: 100vh;
+        background: rgba(11, 61, 145, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5rem;
+        z-index: 15;
+    }
+    .main-nav a {
+        padding: 1rem 0;
+        margin: 0;
+        font-size: 1.3rem;
+        width: 80%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .main-nav .cta {
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+    }
+    .main-nav.open {
+        display: flex;
+    }
+}
